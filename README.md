@@ -17,6 +17,66 @@ Clean Laravel 11 with only Laravel Packager installed
 composer install
 ```
 
+## Pro Tip 1
+
+Keep your fork of this repo clean when developing your packages by creating a new branch for every single one of them. This way, your Laravel copy will always be clean from other package changes and will make your life easier by isolating any problems that might occur during your development phase.
+
+### Create a New Branch for Each Package
+
+Each package should be developed in its own branch to keep your fork clean:
+
+```sh
+git checkout -b feature/my-new-package
+```
+
+### Develop and Commit Your Changes
+
+Work on your package and commit changes as needed:
+
+```sh
+git add .
+git commit -m "Add my new package"
+```
+
+### Push the Package Branch to Your Fork
+
+```sh
+git push origin feature/my-new-package
+```
+
+### Create a Pull Request (If Needed)
+
+If you want to merge your package into another branch, create a pull request on GitHub.
+
+### Switch Back to a Clean State for New Development
+
+Once your package is complete, return to the main branch and remove old package branches if necessary:
+
+```sh
+git checkout main
+git pull origin main
+```
+
+### Optional
+
+```sh
+git branch -D feature/my-new-package  # Delete local branch
+git push origin --delete feature/my-new-package  # Delete remote branch
+```
+
+By following this workflow, your Laravel fork will remain clean, and you’ll avoid conflicts when working on multiple packages. 🚀
+
+## Pro Tip 2
+
+Add [Laravel Package Tools](https://github.com/spatie/laravel-package-tools) to your package, it package contains a PackageServiceProvider that you can use in your packages to easily register config files, migrations, and more.
+
+```sh
+# Navigate to Your Package Directory
+cd packages/vendor-name/package-name
+# Install dependency
+php composer require spatie/laravel-package-tools
+```
+
 ## Laravel Packager Commands
 
 ### New
