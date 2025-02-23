@@ -59,11 +59,7 @@ Once your package is complete, return to the main branch and remove old package 
 ```sh
 git checkout main
 git pull origin main
-```
-
-### Optional
-
-```sh
+# Optional
 git branch -D feature/my-new-package  # Delete local branch
 git push origin --delete feature/my-new-package  # Delete remote branch
 ```
