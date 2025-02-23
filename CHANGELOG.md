@@ -17,3 +17,4 @@
 ## 0.0.4
 
 - Feat: Added laravel packager testsuit to phpunit.xml
+- Docs: Added changelog link

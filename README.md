@@ -17,6 +17,10 @@ Clean Laravel 11 with only Laravel Packager installed
 composer install
 ```
 
+## Changelog
+
+Check the [CHANDELOG.md](/CHANGELOG.md) to keep up with the updates.
+
 ## Pro Tip 1
 
 Keep your fork of this repo clean when developing your packages by creating a new branch for every single one of them. This way, your Laravel copy will always be clean from other package changes and will make your life easier by isolating any problems that might occur during your development phase.
