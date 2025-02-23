@@ -13,3 +13,7 @@
 ## 0.0.3
 
 - Refactor: Added `/packages` to `.gitignore` in order to remove new packages from this source control
+
+## 0.0.4
+
+- Feat: Added laravel packager testsuit to phpunit.xml
