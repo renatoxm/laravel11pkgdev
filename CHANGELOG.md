@@ -18,3 +18,7 @@
 
 - Feat: Added laravel packager testsuit to phpunit.xml
 - Docs: Added changelog link
+
+## 0.0.5
+
+- Docs: changed [README.md](/README.md)

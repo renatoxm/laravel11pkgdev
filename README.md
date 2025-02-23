@@ -59,9 +59,27 @@ Once your package is complete, return to the main branch and remove old package 
 ```sh
 git checkout main
 git pull origin main
+#refresh dependencies
+php composer update
+php npm update
 # Optional
 git branch -D feature/my-new-package  # Delete local branch
 git push origin --delete feature/my-new-package  # Delete remote branch
+```
+
+**NOTICE! Best Practices:**
+
+Before switching branches, commit or stash your work
+
+```sh
+# commit
+git commit -m "your commit message"
+git push origin main
+# or stash tha changes
+git stash
+# go back to main
+git checkout main
+git stash pop  # To restore changes later
 ```
 
 By following this workflow, your Laravel fork will remain clean, and you’ll avoid conflicts when working on multiple packages. 🚀
@@ -75,6 +93,16 @@ Add [Laravel Package Tools](https://github.com/spatie/laravel-package-tools) to 
 cd packages/vendor-name/package-name
 # Install dependency
 php composer require spatie/laravel-package-tools
+```
+
+## Pro Tip 3
+
+Installing package dependencies on your package's folder if are using [Laravel Sail](https://laravel.com/docs/11.x/sail):
+Make sure composer knows that you want to install at your packages root dir by using `--working-dir=.`
+
+```sh
+cd <path-to-your-packages-folder> #navigate to your package's folder root
+../../../vendor/bin/sail composer require some/package --working-dir=.
 ```
 
 ## Laravel Packager Commands
